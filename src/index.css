@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300;500;700;800&family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&display=swap");
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -24,6 +26,45 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* Custom Vars */
+
+   /* Colors */
+  --teal: #44a1a0;
+  --white: #eadeda;
+  --black: #08090c;
+  --gray: #2a2829;
+  --opaque: rgba(0, 0, 0, 0);
+  --whitesmoke: #f5f5f5;
+
+  /* Typography */
+  --heading: "Poppins", sans-serif;
+  --copy: "Darker Grotesque", sans-serif;
+  --text-xs:  0.875rem;
+  --text-sm:  1rem;
+  --text-md:  1.125rem;
+  --text-lg:  1.25rem;
+  --text-xl:  1.875rem;
+  --text-2xl: 2rem;
+  --text-3xl: 2.5rem;
+  --text-4xl: 3rem;
+
+  /* Spacing */
+  --space-xs:  0.5rem;
+  --space-sm:  1rem;
+  --space-md:  1.25rem;
+  --space-lg:  1.5rem;
+  --space-xl:  2rem;
+  --space-2xl: 2.5rem;
+  --space-3xl: 3rem;
+
+  /* Border radius */
+  --radius-sm: 5px;
+  --radius-md: 15px;
+  --radius-full: 100%;
+
+  /* Interaction */
+  --transition: 0.6s;
 
   @media (max-width: 1024px) {
     font-size: 16px;
