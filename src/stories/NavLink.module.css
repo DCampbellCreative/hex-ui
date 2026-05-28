@@ -1,0 +1,27 @@
+.navLink {
+  /* border-radius: var(--radius-sm);
+  border: 2px solid var(--teal); */
+  font-family: var(--copy);
+  text-transform: uppercase;
+  min-width: 125px;
+  background-color: var(--opaque);
+  color: var(--teal);
+  transition: var(--transition);
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: var(--text-lg);
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .navLink {
+    width: 100px;
+    height: 35px;
+  }
+}
