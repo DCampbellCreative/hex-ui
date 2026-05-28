@@ -1,62 +1,31 @@
-// import React from 'react';
-
-// import './button.css';
-
-// export interface ButtonProps {
-//   /** Is this the principal call to action on the page? */
-//   primary?: boolean;
-//   /** What background color to use */
-//   backgroundColor?: string;
-//   /** How large should the button be? */
-//   size?: 'small' | 'medium' | 'large';
-//   /** Button contents */
-//   label: string;
-//   /** Optional click handler */
-//   onClick?: () => void;
-// }
-
-// /** Primary UI component for user interaction */
-// export const Button = ({
-//   primary = false,
-//   size = 'medium',
-//   backgroundColor,
-//   label,
-//   ...props
-// }: ButtonProps) => {
-//   const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
-//   return (
-//     <button
-//       type="button"
-//       className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
-//       style={{ backgroundColor }}
-//       {...props}
-//     >
-//       {label}
-//     </button>
-//   );
-// };
-
 import styles from "./button.module.css";
-import '../index.css';
+import "../index.css";
+import clsx from "clsx";
 
 export interface ButtonProps {
   label: string;
-  href?: string;
   onClick?: () => void;
-};
+  variant?: "primary" | "secondary";
+  isDisabled?: boolean;
+}
 
-export const Button = ({ label, href, onClick }: ButtonProps) => {
+export const Button = ({
+  label,
+  onClick,
+  variant = "primary",
+  isDisabled = false,
+}: ButtonProps) => {
   return (
-    <a
-      className={styles.button}
+    <button
+      className={clsx(
+        styles.button,
+        variant && styles[variant],
+        isDisabled && styles.disabled
+      )}
       onClick={onClick}
-      href={href}
-      rel='noopener noreferrer'
-      target='_blank'
+      disabled={isDisabled}
     >
-      <p className={styles.text}>{label}</p>
-    </a>
+      {label}
+    </button>
   );
 };
-
-// export default Button;
